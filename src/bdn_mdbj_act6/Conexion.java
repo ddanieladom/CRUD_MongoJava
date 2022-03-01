@@ -17,8 +17,8 @@ public class Conexion {
     public  Conexion(){
         try{
             Mongo mongo = new Mongo("Localhost", 27017);
-            base_datos = mongo.getDB("Mascotas");
-            coleccion = base_datos.getCollection("mascota");
+            base_datos = mongo.getDB("Mascotas"); //nombre de la base de datos 
+            coleccion = base_datos.getCollection("mascota");//nombre de la coleccion
             System.out.println("Coneccion establecida");
             
         }catch(UnknownHostException ex){
